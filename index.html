@@ -1,431 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AskmeIdentity - Learn Online</title>
+  <title>AskmeIdentity</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    body { font-family: 'Poppins', sans-serif; }
-    /* Floating animation */
-    @keyframes float {
-      0% { transform: translateY(0px); }
-      50% { transform: translateY(-12px); }
-      100% { transform: translateY(0px); }
-    }
-    .float {
-      animation: float 6s ease-in-out infinite;
-    }
-  </style>
 </head>
-<body class="bg-white">
+<body class="font-sans text-gray-900">
 
-  <!-- Header -->
-  <header class="bg-white shadow-md sticky top-0 z-50">
-    <div class="container mx-auto flex justify-between items-center py-4 px-6">
-      <div class="text-2xl font-bold text-blue-700">AskmeIdentity</div>
-      <nav class="space-x-6 hidden md:flex font-medium">
-        <a href="#" class="hover:text-blue-600">Home</a>
-        <a href="#" class="hover:text-blue-600">About</a>
-        <a href="#" class="hover:text-blue-600">Courses</a>
-        <a href="#" class="hover:text-blue-600">Contact</a>
-      </nav>
-      <div class="space-x-4 hidden md:flex">
-        <a href="#" class="text-gray-700 hover:text-blue-600">Login</a>
-        <a href="#" class="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-2 rounded-full font-medium hover:opacity-90">Signup</a>
-      </div>
-      <button class="md:hidden text-2xl">☰</button>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-<section class="relative bg-gradient-to-br from-purple-700 via-purple-600 to-blue-700 text-white py-20 px-6 overflow-hidden">
-  <!-- Subtle moving gradient overlay -->
-  <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.1),transparent_40%)] animate-pulse"></div>
-
-  <div class="container mx-auto flex flex-col-reverse md:flex-row items-center gap-10 relative z-10">
-    <!-- Text -->
-    <div class="md:w-1/2">
-      <h3 class="uppercase text-sm mb-3 tracking-wider opacity-80">Successful coaches are visionaries</h3>
-      <h1 class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
-        Good <span class="bg-gradient-to-r from-blue-300 to-purple-200 bg-clip-text text-transparent">coaching</span> 
-        is good teaching & nothing else.
-      </h1>
-
-      <!-- Buttons -->
-      <div class="flex gap-4 mb-6">
-        <a href="#" class="border border-white px-6 py-3 rounded-full hover:bg-white hover:text-purple-700 transition font-medium shadow-lg">View Courses</a>
-        <a href="#" class="px-6 py-3 rounded-full bg-white text-purple-700 font-semibold hover:opacity-90 transition shadow-lg">Get Free Consultation</a>
-      </div>
-
-      <!-- Search Bar -->
-      <div class="flex mt-6 max-w-lg bg-white/10 backdrop-blur-md rounded-full shadow-lg overflow-hidden">
-        <input type="text" placeholder="What do you want to learn today?" 
-               class="px-5 py-3 w-full text-gray-200 placeholder-gray-300 bg-transparent focus:outline-none">
-        <button class="bg-gradient-to-r from-blue-500 to-purple-500 px-6 py-3 font-medium hover:opacity-90 transition">Search</button>
-      </div>
-    </div>
-
-    <!-- Improved Image -->
-    <div class="md:w-1/2 flex justify-center relative">
-      <div class="absolute top-10 right-10 w-72 h-72 bg-blue-400 rounded-full blur-3xl opacity-40 -z-10 animate-pulse"></div>
-      <div class="absolute bottom-10 left-10 w-60 h-60 bg-purple-400 rounded-full blur-3xl opacity-40 -z-10 animate-pulse"></div>
-      <img 
-        src="brunette-woman-hugging-laptop 1.jpg" 
-        alt="Teacher" 
-        class="rounded-2xl shadow-2xl border-4 border-white max-w-sm md:max-w-md 
-               transform transition duration-700 hover:scale-105 hover:shadow-3xl animate-bounce-slow"
-      >
-    </div>
-  </div>
-
-  <!-- Logos -->
-<div class="mt-16 flex justify-center gap-14 opacity-90 flex-wrap">
-  <!-- Spotify -->
-  <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/spotify.svg" 
-       class="h-10 grayscale hover:grayscale-0 transition" alt="Spotify">
-
-  <!-- Amazon -->
-  <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/amazon.svg" 
-       class="h-10 grayscale hover:grayscale-0 transition" alt="Amazon">
-
-  <!-- Cisco -->
-  <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/cisco.svg" 
-       class="h-10 grayscale hover:grayscale-0 transition" alt="Cisco">
-
-  <!-- Logitech -->
-  <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/logitech.svg" 
-       class="h-10 grayscale hover:grayscale-0 transition" alt="Logitech">
-</div>
-
-</section>
-
-<!-- Extra CSS for smooth floating animation -->
-<style>
-  .animate-bounce-slow {
-    animation: bounce-slow 6s infinite ease-in-out;
-  }
-  @keyframes bounce-slow {
-    0%, 100% { transform: translateY(0) scale(1); }
-    50% { transform: translateY(-15px) scale(1.02); }
-  }
-</style>
-
-  <!-- Featured Courses -->
-  <section class="py-20 px-6 bg-gray-50">
-    <div class="container mx-auto text-center mb-12">
-      <h2 class="text-3xl font-bold">Featured <span class="text-blue-500">Courses</span></h2>
-      <p class="mt-2 text-gray-600">Explore our most popular courses designed to empower your career</p>
-    </div>
-
-    <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      <!-- 1 -->
-      <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition transform hover:-translate-y-2">
-        <img src="Mask group.jpg" alt="Motion Graphics" class="w-full h-44 object-cover">
-        <div class="p-5 text-left">
-          <h3 class="font-semibold mb-2">Motion Graphics: Create Typography Animation</h3>
-          <p class="text-gray-500 text-sm">1,957 Students • 55m</p>
-          <div class="flex items-center justify-between mt-4">
-            <span class="text-xl font-bold text-blue-600">₹499</span>
-            <span class="text-yellow-400">⭐⭐⭐⭐☆</span>
-          </div>
-          <button class="mt-4 text-blue-600 hover:underline">+ Add to Cart</button>
+  <!-- HERO SECTION -->
+  <section class="relative bg-gradient-to-r from-purple-600 to-blue-600 text-white py-20 px-6 overflow-hidden">
+    <div class="container mx-auto flex flex-col-reverse md:flex-row items-center gap-10">
+      <!-- Text -->
+      <div class="md:w-1/2">
+        <h3 class="uppercase text-sm mb-3 tracking-wider opacity-80">Successful coaches are visionaries</h3>
+        <h1 class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
+          Good <span class="text-blue-300">coaching</span> is good teaching & nothing else.
+        </h1>
+        <div class="flex gap-4 mb-6">
+          <a href="#" class="border border-white px-6 py-3 rounded-full hover:bg-white hover:text-purple-600 transition">View Courses</a>
+          <a href="#" class="px-6 py-3 rounded-full bg-white text-purple-600 font-medium hover:opacity-90 transition">Get Free Consultation</a>
+        </div>
+        <div class="flex mt-6 max-w-lg">
+          <input type="text" placeholder="What do you want to learn today?" class="rounded-l-full px-5 py-3 w-full text-gray-700 focus:outline-none">
+          <button class="bg-blue-500 px-6 py-3 rounded-r-full hover:bg-blue-600">Search</button>
         </div>
       </div>
 
-      <!-- 2 -->
-      <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition transform hover:-translate-y-2">
-        <img src="Mask group (1).jpg" alt="Advanced PHP" class="w-full h-44 object-cover">
-        <div class="p-5 text-left">
-          <h3 class="font-semibold mb-2">Advance PHP with JS for Smart Web</h3>
-          <p class="text-gray-500 text-sm">9,575 Students • 55m</p>
-          <div class="flex items-center justify-between mt-4">
-            <span class="text-xl font-bold text-blue-600">₹499</span>
-            <span class="text-yellow-400">⭐⭐⭐⭐☆</span>
-          </div>
-          <button class="mt-4 text-blue-600 hover:underline">+ Add to Cart</button>
-        </div>
-      </div>
-
-      <!-- 3 -->
-      <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition transform hover:-translate-y-2">
-        <img src="Mask group (2).jpg" alt="Education Software" class="w-full h-44 object-cover">
-        <div class="p-5 text-left">
-          <h3 class="font-semibold mb-2">Education Software with PHP & JS</h3>
-          <p class="text-gray-500 text-sm">2,957 Students • 45m</p>
-          <div class="flex items-center justify-between mt-4">
-            <span class="text-xl font-bold text-blue-600">₹499</span>
-            <span class="text-yellow-400">⭐⭐⭐⭐☆</span>
-          </div>
-          <button class="mt-4 text-blue-600 hover:underline">+ Add to Cart</button>
-        </div>
-      </div>
-
-      <!-- 4 -->
-      <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition transform hover:-translate-y-2">
-        <img src="Mask group (3).jpg" alt="UI UX" class="w-full h-44 object-cover">
-        <div class="p-5 text-left">
-          <h3 class="font-semibold mb-2">UI/UX Design: From Wireframe to Prototype</h3>
-          <p class="text-gray-500 text-sm">6,104 Students • 1h 20m</p>
-          <div class="flex items-center justify-between mt-4">
-            <span class="text-xl font-bold text-blue-600">₹699</span>
-            <span class="text-yellow-400">⭐⭐⭐⭐⭐</span>
-          </div>
-          <button class="mt-4 text-blue-600 hover:underline">+ Add to Cart</button>
-        </div>
-      </div>
-
-      <!-- 5 -->
-      <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition transform hover:-translate-y-2">
-        <img src="Mask group (4).jpg" alt="Data Science" class="w-full h-44 object-cover">
-        <div class="p-5 text-left">
-          <h3 class="font-semibold mb-2">Data Science Bootcamp: Python & ML</h3>
-          <p class="text-gray-500 text-sm">12,340 Students • 2h 10m</p>
-          <div class="flex items-center justify-between mt-4">
-            <span class="text-xl font-bold text-blue-600">₹999</span>
-            <span class="text-yellow-400">⭐⭐⭐⭐☆</span>
-          </div>
-          <button class="mt-4 text-blue-600 hover:underline">+ Add to Cart</button>
-        </div>
-      </div>
-
-      <!-- 6 -->
-      <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition transform hover:-translate-y-2">
-        <img src="Mask group (5).jpg" alt="Digital Marketing" class="w-full h-44 object-cover">
-        <div class="p-5 text-left">
-          <h3 class="font-semibold mb-2">Digital Marketing Mastery 2025</h3>
-          <p class="text-gray-500 text-sm">8,201 Students • 1h 05m</p>
-          <div class="flex items-center justify-between mt-4">
-            <span class="text-xl font-bold text-blue-600">₹799</span>
-            <span class="text-yellow-400">⭐⭐⭐⭐⭐</span>
-          </div>
-          <button class="mt-4 text-blue-600 hover:underline">+ Add to Cart</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="text-center mt-10">
-      <a href="#" class="bg-blue-600 text-white px-8 py-3 rounded-full font-medium hover:bg-blue-700">Explore More Courses</a>
-    </div>
-  </section>
-  <!-- Why Learn -->
-  <section class="py-20 px-6 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
-    <div class="container mx-auto text-center mb-12">
-      <h2 class="text-3xl font-bold">Why <span class="text-blue-300">learn</span> with us?</h2>
-      <p class="mt-2">We provide the best courses, top-class mentors & extraordinary placement support</p>
-    </div>
-    <div class="container mx-auto grid md:grid-cols-3 gap-10 text-center">
-      <div>
-        <div class="w-16 h-16 mx-auto flex items-center justify-center bg-white text-purple-600 rounded-full text-3xl mb-4">📚</div>
-        <h3 class="font-semibold mb-2">01. Learn</h3>
-        <p>Learn continually. There is always "one more thing" to learn.</p>
-      </div>
-      <div>
-        <div class="w-16 h-16 mx-auto flex items-center justify-center bg-white text-purple-600 rounded-full text-3xl mb-4">🎓</div>
-        <h3 class="font-semibold mb-2">02. Graduate</h3>
-        <p>Be bold, be courageous, be your best.</p>
-      </div>
-      <div>
-        <div class="w-16 h-16 mx-auto flex items-center justify-center bg-white text-purple-600 rounded-full text-3xl mb-4">💼</div>
-        <h3 class="font-semibold mb-2">03. Work</h3>
-        <p>Great companies are built with hard work & teamwork.</p>
-      </div>
-    </div>
-  </section>
-
- <!-- Top Categories with Images -->
-  <section class="py-20 px-6 bg-gray-50">
-    <div class="container mx-auto text-center mb-12">
-      <h2 class="text-3xl font-bold">Top <span class="text-blue-500">Categories</span></h2>
-      <p class="mt-2 text-gray-600">100+ unique online course categories to explore</p>
-    </div>
-    <div class="container mx-auto grid md:grid-cols-6 gap-6 text-center">
-      <!-- Category Card -->
-      <div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition cursor-pointer">
-        <img src="div.features-box-image (1).jpg" class="mx-auto mb-3" alt="Digital Marketing">
-        <h4 class="font-semibold">Digital Marketing</h4>
-        <p class="text-gray-500 text-sm">25 Courses</p>
-      </div>
-      <div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition cursor-pointer">
-        <img src="div.features-box-image (2).jpg" class="mx-auto mb-3" alt="Web Development">
-        <h4 class="font-semibold">Web Development</h4>
-        <p class="text-gray-500 text-sm">16 Courses</p>
-      </div>
-      <div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition cursor-pointer">
-        <img src="div.features-box-image (3).jpg" class="mx-auto mb-3" alt="Art & Humanities">
-        <h4 class="font-semibold">Art & Humanities</h4>
-        <p class="text-gray-500 text-sm">76 Courses</p>
-      </div>
-      <div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition cursor-pointer">
-        <img src="div.features-box-image (4).jpg" class="mx-auto mb-3" alt="Personal Development">
-        <h4 class="font-semibold">Personal Development</h4>
-        <p class="text-gray-500 text-sm">22 Courses</p>
-      </div>
-      <div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition cursor-pointer">
-        <img src="div.features-box-image.jpg" class="mx-auto mb-3" alt="IT & Software">
-        <h4 class="font-semibold">IT & Software</h4>
-        <p class="text-gray-500 text-sm">110 Courses</p>
-      </div>
-      <div class="bg-white p-6 rounded-lg shadow hover:shadow-xl border-2 border-blue-500 transition cursor-pointer">
-        <img src="div.features-box-image (2).jpg" class="mx-auto mb-3" alt="Graphic Design">
-        <h4 class="font-semibold">Graphic Design</h4>
-        <p class="text-gray-500 text-sm">85 Courses</p>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- Subscribe & Video -->
-<section class="py-20 px-6 bg-gradient-to-r from-purple-500 to-blue-500 text-white">
-  <div class="container mx-auto text-center mb-12">
-    <h2 class="text-3xl md:text-4xl font-bold mb-3">Subscribe For Updates On New Courses</h2>
-    <p class="text-lg md:text-xl mb-6">20k+ students daily learn with AskmeIdentity. Subscribe now!</p>
-    
-    <form class="flex flex-col md:flex-row justify-center gap-3 max-w-2xl mx-auto">
-      <label for="email" class="sr-only">Email address</label>
-      <input 
-        id="email"
-        type="email" 
-        placeholder="Enter your email" 
-        class="rounded-l-full px-5 py-3 text-gray-700 w-full md:flex-1 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
-      >
-      <button 
-        type="submit" 
-        class="bg-blue-700 px-6 py-3 rounded-r-full hover:bg-blue-800 transition-colors"
-      >
-        Subscribe
-      </button>
-    </form>
-  </div>
-
-  <div class="container mx-auto flex justify-center">
-    <div class="relative group">
-      <img 
-        src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg" 
-        alt="Video" 
-        class="rounded-xl shadow-lg transition-transform duration-300 group-hover:scale-105"
-      >
-      <div class="absolute inset-0 flex justify-center items-center">
-        <button 
-          aria-label="Play video"
-          class="bg-green-500 rounded-full p-6 text-3xl text-white shadow-lg cursor-pointer hover:scale-110 transform transition-transform"
+      <!-- Improved Image -->
+      <div class="md:w-1/2 flex justify-center relative">
+        <div class="absolute top-10 right-10 w-72 h-72 bg-blue-300 rounded-full blur-3xl opacity-40 -z-10"></div>
+        <div class="absolute bottom-10 left-10 w-60 h-60 bg-purple-300 rounded-full blur-3xl opacity-40 -z-10"></div>
+        <img 
+          src="brunette-woman-hugging-laptop 1.jpg" 
+          alt="Teacher" 
+          class="rounded-2xl shadow-2xl border-4 border-white max-w-sm md:max-w-md 
+                 transform transition duration-500 hover:scale-105 hover:shadow-3xl"
         >
-          ▶
-        </button>
       </div>
     </div>
-  </div>
-</section>
 
+    <!-- Logos -->
+    <div class="mt-16 flex justify-center gap-14 opacity-90 flex-wrap">
+      <img src="https://1000logos.net/wp-content/uploads/2017/08/Spotify-Logo.png" class="h-10 object-contain grayscale hover:grayscale-0 transition" alt="Spotify">
+      <img src="https://1000logos.net/wp-content/uploads/2016/10/Amazon-logo.png" class="h-10 object-contain grayscale hover:grayscale-0 transition" alt="Amazon">
+      <img src="https://1000logos.net/wp-content/uploads/2021/05/Cisco-logo.png" class="h-10 object-contain grayscale hover:grayscale-0 transition" alt="Cisco">
+      <img src="https://1000logos.net/wp-content/uploads/2017/06/Logitech-Logo.png" class="h-10 object-contain grayscale hover:grayscale-0 transition" alt="Logitech">
+    </div>
+  </section>
 
-  <!-- Testimonials -->
-  <section class="py-20 px-6 bg-gray-50">
+  <!-- TOP CATEGORIES -->
+  <section class="py-20 px-6">
     <div class="container mx-auto text-center mb-12">
-      <h2 class="text-3xl font-bold">Testimonials</h2>
-      <p class="text-gray-600">What our students say about us</p>
+      <h2 class="text-4xl font-bold mb-4">Top Categories</h2>
+      <p class="text-lg text-gray-600">Explore learning paths handpicked for you</p>
     </div>
-    <div class="container mx-auto grid md:grid-cols-3 gap-8">
-      <div class="bg-white rounded-lg shadow-md p-6">
-        <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg" class="w-16 h-16 mx-auto rounded-full mb-4" alt="Student">
-        <p class="text-gray-600 italic mb-3">“Such an amazing trainer, explains clearly & makes learning easy.”</p>
-        <div class="text-yellow-400">⭐⭐⭐⭐☆</div>
+    <div class="grid md:grid-cols-4 gap-8">
+      <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 text-center">
+        <img src="https://img.icons8.com/color/96/000000/artificial-intelligence.png" class="mx-auto mb-4 h-20" alt="AI">
+        <h3 class="font-semibold text-lg">AI & ML</h3>
       </div>
-      <div class="bg-white rounded-lg shadow-md p-6">
-        <img src="th (1) 4.jpg" class="w-16 h-16 mx-auto rounded-full mb-4" alt="Student">
-        <p class="text-gray-600 italic mb-3">“Guidance was excellent, syllabus covered with great clarity.”</p>
-        <div class="text-yellow-400">⭐⭐⭐⭐☆</div>
+      <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 text-center">
+        <img src="https://img.icons8.com/color/96/000000/web-design.png" class="mx-auto mb-4 h-20" alt="Web Dev">
+        <h3 class="font-semibold text-lg">Web Development</h3>
       </div>
-      <div class="bg-white rounded-lg shadow-md p-6">
-        <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg" class="w-16 h-16 mx-auto rounded-full mb-4" alt="Student">
-        <p class="text-gray-600 italic mb-3">“Really helpful for placements, highly recommended!”</p>
-        <div class="text-yellow-400">⭐⭐⭐⭐☆</div>
+      <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 text-center">
+        <img src="https://img.icons8.com/color/96/000000/database.png" class="mx-auto mb-4 h-20" alt="Database">
+        <h3 class="font-semibold text-lg">Databases</h3>
+      </div>
+      <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 text-center">
+        <img src="https://img.icons8.com/color/96/000000/marketing.png" class="mx-auto mb-4 h-20" alt="Marketing">
+        <h3 class="font-semibold text-lg">Marketing</h3>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-<footer class="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-16 px-6 mt-12">
-  <div class="container mx-auto grid md:grid-cols-5 gap-8">
-    <!-- Connect -->
-    <div>
-      <h3 class="font-bold mb-4">Connect</h3>
-      <p>AskmeIdentity</p>
-      <p class="text-sm opacity-80">
-        Sri Jagannath Nivas, Pragati Colony, Mallorepally, Nuzvid, Hyderabad, 500005
-      </p>
+  <!-- FEATURED COURSES -->
+  <section class="py-20 px-6 bg-gray-50">
+    <div class="container mx-auto text-center mb-12">
+      <h2 class="text-4xl font-bold mb-4">Featured Courses</h2>
+      <p class="text-lg text-gray-600">Learn from industry experts and grow your career</p>
     </div>
-
-    <!-- Classes -->
-    <div>
-      <h3 class="font-bold mb-4">Classes</h3>
-      <ul class="space-y-2 text-sm opacity-90">
-        <li>Classroom courses</li>
-        <li>Virtual classroom</li>
-        <li>E-learning</li>
-        <li>Video Courses</li>
-        <li>Offline Courses</li>
-      </ul>
+    <div class="grid md:grid-cols-4 gap-8">
+      <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6">
+        <img src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg" class="rounded-lg mb-4 h-40 w-full object-cover" alt="Course 1">
+        <h3 class="font-semibold text-lg mb-2">Data Science Mastery</h3>
+        <p class="text-gray-600 text-sm">Master Python, ML, and AI with hands-on projects.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6">
+        <img src="https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg" class="rounded-lg mb-4 h-40 w-full object-cover" alt="Course 2">
+        <h3 class="font-semibold text-lg mb-2">Full-Stack Web Dev</h3>
+        <p class="text-gray-600 text-sm">Learn MERN stack and build real-world apps.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6">
+        <img src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg" class="rounded-lg mb-4 h-40 w-full object-cover" alt="Course 3">
+        <h3 class="font-semibold text-lg mb-2">UI/UX Design</h3>
+        <p class="text-gray-600 text-sm">Design stunning interfaces with Figma & Adobe XD.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6">
+        <img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg" class="rounded-lg mb-4 h-40 w-full object-cover" alt="Course 4">
+        <h3 class="font-semibold text-lg mb-2">Cloud Computing</h3>
+        <p class="text-gray-600 text-sm">AWS, Azure, and GCP fundamentals in one course.</p>
+      </div>
     </div>
+  </section>
 
-    <!-- Community -->
-    <div>
-      <h3 class="font-bold mb-4">Community</h3>
-      <ul class="space-y-2 text-sm opacity-90">
-        <li>Learners</li>
-        <li>Partners</li>
-        <li>Developers</li>
-        <li>Transactions</li>
-        <li>Blog</li>
-      </ul>
+  <!-- SUBSCRIBE & VIDEO -->
+  <section class="py-20 px-6 bg-gradient-to-r from-purple-500 to-blue-500 text-white">
+    <div class="container mx-auto grid md:grid-cols-2 gap-10 items-center">
+      
+      <!-- Subscribe Form -->
+      <div class="bg-white/10 backdrop-blur-md rounded-2xl shadow-lg p-10 flex flex-col justify-center text-center h-full">
+        <h2 class="text-3xl md:text-4xl font-bold mb-3">Subscribe For Updates</h2>
+        <p class="text-lg md:text-xl mb-6">20k+ students learn with AskmeIdentity every day. Don’t miss out!</p>
+        
+        <form class="flex flex-col md:flex-row justify-center gap-3 max-w-md mx-auto">
+          <input 
+            type="email" 
+            placeholder="Enter your email" 
+            class="rounded-l-full px-5 py-3 text-gray-700 w-full md:flex-1 focus:outline-none focus:ring-2 focus:ring-purple-500"
+          >
+          <button 
+            type="submit" 
+            class="bg-blue-700 px-6 py-3 rounded-r-full hover:bg-blue-800 transition-colors"
+          >
+            Subscribe
+          </button>
+        </form>
+      </div>
+
+      <!-- Video Preview -->
+      <div class="relative rounded-2xl overflow-hidden shadow-lg group h-full flex justify-center items-center">
+        <img 
+          src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg" 
+          alt="Video" 
+          class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+        >
+        <div class="absolute inset-0 flex justify-center items-center bg-black/30">
+          <button 
+            aria-label="Play video"
+            class="bg-green-500 rounded-full p-6 text-3xl text-white shadow-lg cursor-pointer hover:scale-110 transform transition-transform"
+          >
+            ▶
+          </button>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <!-- Quick links -->
-    <div>
-      <h3 class="font-bold mb-4">Quick links</h3>
-      <ul class="space-y-2 text-sm opacity-90">
-        <li>Home</li>
-        <li>Professional Education</li>
-        <li>Courses</li>
-        <li>Admissions</li>
-        <li>Testimonial</li>
-        <li>Programs</li>
-      </ul>
+  <!-- FOOTER -->
+  <footer class="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-16 px-6 mt-12">
+    <div class="container mx-auto grid md:grid-cols-5 gap-8">
+      <div>
+        <h3 class="font-bold mb-4">Connect</h3>
+        <p>AskmeIdentity</p>
+        <p class="text-sm opacity-80">Sri Jagannath Nivas, Pragati Colony, Mallorepally, Nuzvid, Hyderabad, 500005</p>
+      </div>
+      <div>
+        <h3 class="font-bold mb-4">Classes</h3>
+        <ul class="space-y-2 text-sm opacity-90">
+          <li>Classroom courses</li>
+          <li>Virtual classroom</li>
+          <li>E-learning</li>
+          <li>Video Courses</li>
+          <li>Offline Courses</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-bold mb-4">Community</h3>
+        <ul class="space-y-2 text-sm opacity-90">
+          <li>Learners</li>
+          <li>Partners</li>
+          <li>Developers</li>
+          <li>Transactions</li>
+          <li>Blog</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-bold mb-4">Quick links</h3>
+        <ul class="space-y-2 text-sm opacity-90">
+          <li>Home</li>
+          <li>Professional Education</li>
+          <li>Courses</li>
+          <li>Admissions</li>
+          <li>Testimonial</li>
+          <li>Programs</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-bold mb-4">More</h3>
+        <ul class="space-y-2 text-sm opacity-90">
+          <li>Press</li>
+          <li>Investors</li>
+          <li>Terms</li>
+          <li>Privacy</li>
+          <li>Help</li>
+          <li>Contact</li>
+        </ul>
+      </div>
     </div>
-
-    <!-- More -->
-    <div>
-      <h3 class="font-bold mb-4">More</h3>
-      <ul class="space-y-2 text-sm opacity-90">
-        <li>Press</li>
-        <li>Investors</li>
-        <li>Terms</li>
-        <li>Privacy</li>
-        <li>Help</li>
-        <li>Contact</li>
-      </ul>
+    <div class="mt-10 flex justify-center gap-6">
+      <a href="#" class="w-10 h-10 flex items-center justify-center bg-white text-blue-600 rounded-full hover:scale-110 transition">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" class="w-6 h-6">
+      </a>
+      <a href="#" class="w-10 h-10 flex items-center justify-center bg-white text-blue-400 rounded-full hover:scale-110 transition">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" class="w-6 h-6">
+      </a>
+      <a href="#" class="w-10 h-10 flex items-center justify-center bg-white text-pink-500 rounded-full hover:scale-110 transition">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" class="w-6 h-6">
+      </a>
+      <a href="#" class="w-10 h-10 flex items-center justify-center bg-white text-red-600 rounded-full hover:scale-110 transition">
+        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" class="w-6 h-6">
+      </a>
     </div>
-  </div>
+    <p class="text-center mt-8 text-sm opacity-70">© 2025 AskmeIdentity. All Rights Reserved.</p>
+  </footer>
 
-  <!-- Social Media Icons -->
-  <div class="mt-10 flex justify-center gap-6">
-    <a href="#" target="_blank" class="w-10 h-10 flex items-center justify-center bg-white rounded-full hover:scale-110 transition">
-      <img src="https://img.icons8.com/ios-filled/30/6B21A8/instagram-new.png" alt="Instagram"/>
-    </a>
-    <a href="#" target="_blank" class="w-10 h-10 flex items-center justify-center bg-white rounded-full hover:scale-110 transition">
-      <img src="https://img.icons8.com/ios-filled/30/6B21A8/facebook-new.png" alt="Facebook"/>
-    </a>
-    <a href="#" target="_blank" class="w-10 h-10 flex items-center justify-center bg-white rounded-full hover:scale-110 transition">
-      <img src="https://img.icons8.com/ios-filled/30/6B21A8/twitterx--v2.png" alt="Twitter"/>
-    </a>
-    <a href="#" target="_blank" class="w-10 h-10 flex items-center justify-center bg-white rounded-full hover:scale-110 transition">
-      <img src="https://img.icons8.com/ios-filled/30/6B21A8/linkedin.png" alt="LinkedIn"/>
-    </a>
-    <a href="#" target="_blank" class="w-10 h-10 flex items-center justify-center bg-white rounded-full hover:scale-110 transition">
-      <img src="https://img.icons8.com/ios-filled/30/6B21A8/youtube-play.png" alt="YouTube"/>
-    </a>
-  </div>
-
-  <!-- Footer Bottom -->
-  <p class="text-center mt-8 text-sm opacity-70">© 2025 AskmeIdentity. All Rights Reserved.</p>
-</footer>
+</body>
+</html>
